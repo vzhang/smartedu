@@ -1,0 +1,38 @@
+appId: cn.smartedu.downloader
+productName: SmartEdu
+copyright: Copyright © 2024-2026
+
+directories:
+  output: release
+  buildResources: resources
+
+files:
+  - dist/main/**/*
+  - renderer/out/**/*
+  - package.json
+  - "!node_modules"
+
+mac:
+  category: public.app-category.education
+  target:
+    - target: dmg
+      arch:
+        - arm64
+        - x64
+  darkModeSupport: true
+
+dmg:
+  title: SmartEdu
+  artifactName: SmartEdu-${version}-${arch}.dmg
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  artifactName: SmartEdu-${version}-Setup.exe
+  shortcutName: SmartEdu

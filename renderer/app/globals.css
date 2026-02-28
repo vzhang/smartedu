@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* macOS 原生风格基础样式 */
+@theme {
+  --color-primary: #007AFF;
+  --color-primary-hover: #0056CC;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F5F5F7;
+  --color-border: #D2D2D7;
+  --color-text: #1D1D1F;
+  --color-text-secondary: #86868B;
+  --color-success: #34C759;
+  --color-danger: #FF3B30;
+  --color-warning: #FF9500;
+}
+
+/* 拖拽区域（macOS 标题栏） */
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
